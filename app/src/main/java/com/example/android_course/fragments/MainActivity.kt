@@ -1,13 +1,9 @@
-package com.example.android_course
+package com.example.android_course.fragments
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Button
-import android.widget.TextView
-import androidx.core.view.children
-import androidx.core.view.isVisible
+import com.example.android_course.R
 
 class MainActivity : AppCompatActivity(), Navigator {
 
