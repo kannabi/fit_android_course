@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.android_course">
 
     <application
@@ -22,11 +23,38 @@
         <activity
             android:name=".rv.PackagesListActivity"
             android:exported="true">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
+
+        <activity
+            android:name=".service.BackgroundActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service
+            android:name=".service.WhatsAboutMoneyService"
+            android:enabled="true"
+            android:exported="false"/>
+
+
+<!--        <receiver-->
+<!--            android:name=".service.MoneyBroadcastReceiver"-->
+<!--            android:enabled="true"-->
+<!--            android:exported="true"-->
+<!--            tools:ignore="ExportedReceiver">-->
+
+<!--            <intent-filter>-->
+<!--                <action android:name="com.example.android_course.intent.HOW_ABOUT_MONEY"/>-->
+<!--            </intent-filter>-->
+
+<!--        </receiver>-->
     </application>
 
 </manifest>
