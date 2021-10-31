@@ -1,10 +1,11 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
 }
 
 android {
-    compileSdk 30
+    compileSdk 31
 
     defaultConfig {
         applicationId "com.example.android_course"
@@ -45,4 +46,10 @@ dependencies {
     implementation "androidx.work:work-runtime:2.6.0"
     // Kotlin + coroutines
     implementation "androidx.work:work-runtime-ktx:2.6.0"
+
+    implementation "androidx.room:room-runtime:2.4.0-beta01"
+    kapt "androidx.room:room-compiler:2.4.0-beta01"
+
+    // optional - RxJava2 support for Room
+//    implementation "androidx.room:room-rxjava2:$room_version"
 }

@@ -4,13 +4,14 @@ import android.app.Activity
 import android.app.Application
 import android.os.Bundle
 import com.example.android_course.datastores.domain.Datastore
+import com.example.android_course.datastores.domain.StudentDatastore
 
 class DatastoreInjectionActivityCallback(
-    private val datastore: Datastore
+    private val datastore: StudentDatastore
 ): Application.ActivityLifecycleCallbacks {
 
     override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {
-        (activity as? DatastoreInjectable)?.injectDatastore(datastore)
+        (activity as? StudentDatastoreInjectable)?.injectDatasore(datastore)
     }
 
     override fun onActivityStarted(activity: Activity) {
