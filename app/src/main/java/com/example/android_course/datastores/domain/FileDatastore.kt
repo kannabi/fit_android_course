@@ -8,8 +8,8 @@ import java.math.BigDecimal
 class FileDatastore(
     private val context: Context
 ): Datastore {
-    override fun getPrice(type: String): BigDecimal = BigDecimal("300.00")
 
+    override var price: BigDecimal? = BigDecimal("300.00")
 
     private fun someIllustrations() {
         // корень файлохранилища приложения

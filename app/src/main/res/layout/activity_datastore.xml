@@ -8,6 +8,17 @@
     tools:context=".datastores.DatastoreActivity"
     android:orientation="vertical">
 
+    <EditText
+        android:id="@+id/price_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/price_enter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SAVE"/>
+
 
     <LinearLayout
         android:layout_width="match_parent"
