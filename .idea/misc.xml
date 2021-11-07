@@ -11,7 +11,11 @@
         <entry key="..\:/Users/hekpo/AndroidStudioProjects/android_course/app/src/main/res/layout/activity_packages_list.xml" value="0.19972826086956522" />
         <entry key="..\:/Users/hekpo/AndroidStudioProjects/android_course/app/src/main/res/layout/fragment_details.xml" value="0.2807971014492754" />
         <entry key="..\:/Users/hekpo/AndroidStudioProjects/android_course/app/src/main/res/layout/item_package.xml" value="0.19972826086956522" />
+        <entry key="app/src/main/res/layout-land/fragment_bind_example.xml" value="0.2679509632224168" />
+        <entry key="app/src/main/res/layout/activity_aac.xml" value="0.3015625" />
         <entry key="app/src/main/res/layout/activity_datastore.xml" value="0.321875" />
+        <entry key="app/src/main/res/layout/fragment_bind_binding.xml" value="0.3026041666666667" />
+        <entry key="app/src/main/res/layout/fragment_bind_example.xml" value="0.31875" />
       </map>
     </option>
   </component>
