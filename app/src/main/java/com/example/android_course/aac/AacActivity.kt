@@ -9,13 +9,17 @@ class AacActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityAacBinding
 
+    private lateinit var sphericalPermanentConnectionListener: SphericalPermanentConnectionListener
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAacBinding.inflate(LayoutInflater.from(this))
         setContentView(binding.root)
         binding.title.text = "LOL KEK TITLE"
-        supportFragmentManager.beginTransaction()
-            .replace(binding.fragmentContainer.id, BindExampleFragment.getInstance())
-            .commit()
+        sphericalPermanentConnectionListener = SphericalPermanentConnectionListener(lifecycle = lifecycle) {
+            // do something
+        }
+
+        lifecycle.addObserver(sphericalPermanentConnectionListener)
     }
 }
