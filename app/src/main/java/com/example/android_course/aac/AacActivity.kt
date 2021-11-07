@@ -2,12 +2,16 @@ package com.example.android_course.aac
 
 import android.os.Bundle
 import android.view.LayoutInflater
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.get
 import com.example.android_course.databinding.ActivityAacBinding
 
 class AacActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityAacBinding
+    private val sphericalViewModel: SphericalViewModel by viewModels()
 
     private lateinit var sphericalPermanentConnectionListener: SphericalPermanentConnectionListener
 
@@ -15,6 +19,7 @@ class AacActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityAacBinding.inflate(LayoutInflater.from(this))
         setContentView(binding.root)
+
         binding.title.text = "LOL KEK TITLE"
         sphericalPermanentConnectionListener = SphericalPermanentConnectionListener(
             lifecycle = lifecycle,
@@ -24,6 +29,14 @@ class AacActivity : AppCompatActivity() {
         }
 
         lifecycle.addObserver(sphericalPermanentConnectionListener)
+
+        sphericalViewModel.state.observe(this) {
+            binding.title.text = it.toString()
+        }
+
+        binding.lolKekButton.setOnClickListener {
+            sphericalViewModel.onLolKek()
+        }
     }
 
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
@@ -32,5 +45,9 @@ class AacActivity : AppCompatActivity() {
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
+    }
+
+    override fun onRetainCustomNonConfigurationInstance(): Any? {
+        return super.onRetainCustomNonConfigurationInstance()
     }
 }
