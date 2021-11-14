@@ -1,9 +1,11 @@
 package com.example.android_course.dagger.tetra
 
+import com.example.android_course.dagger.di.FlowScope
 import dagger.Module
 import dagger.Provides
 import dagger.Subcomponent
 
+@FlowScope
 @Subcomponent(modules = [TetraModule::class])
 interface TetraComponent {
 
@@ -22,6 +24,7 @@ class TetraSubcomponentModule
 
 @Module
 class TetraModule {
+    @FlowScope
     @Provides
     fun provideTetraPresenter(): TetraPresenter = TetraPresenter()
 }
