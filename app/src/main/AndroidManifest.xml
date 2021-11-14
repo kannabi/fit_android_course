@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Android_course">
-
+        <activity
+            android:name=".dagger.tetra.TetrahedronActivity"
+            android:exported="false" />
         <activity
             android:name=".dagger.PolyhedronActivity"
             android:exported="true">
@@ -23,7 +25,7 @@
         </activity>
         <activity
             android:name=".aac.AacActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".datastores.StudentActivity"
             android:exported="true">

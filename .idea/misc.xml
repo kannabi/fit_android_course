@@ -15,8 +15,11 @@
         <entry key="app/src/main/res/layout/activity_aac.xml" value="0.3015625" />
         <entry key="app/src/main/res/layout/activity_dagger.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_datastore.xml" value="0.321875" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_tetrahdron.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_bind_binding.xml" value="0.3026041666666667" />
         <entry key="app/src/main/res/layout/fragment_bind_example.xml" value="0.31875" />
+        <entry key="app/src/main/res/layout/fragment_tetra_first.xml" value="0.1" />
       </map>
     </option>
   </component>
