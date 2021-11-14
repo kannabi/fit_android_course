@@ -1,5 +1,6 @@
 package com.example.android_course.dagger.di
 
+import android.content.Context
 import com.example.android_course.dagger.domain.PolyhedronRemoteDatasource
 import dagger.Module
 import dagger.Provides
@@ -7,8 +8,8 @@ import dagger.Provides
 @Module
 class NetworkModule {
     @Provides
-    fun provideRemoteDatasource(): PolyhedronRemoteDatasource {
+    fun provideRemoteDatasource(context: Context): PolyhedronRemoteDatasource {
         return PolyhedronRemoteDatasource()
-            .apply { prettyComplexInitialize(Any()) }
+            .apply { prettyComplexInitialize(Any(), context) }
     }
 }

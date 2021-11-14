@@ -1,8 +1,12 @@
 package com.example.android_course.dagger.domain
 
+import android.content.Context
+
 class PolyhedronRemoteDatasource {
-    var wasInitialized = false
-    fun prettyComplexInitialize(notAMeaninglessParameterAtAll: Any) {
+    private var wasInitialized = false
+    private lateinit var context: Context
+    fun prettyComplexInitialize(notAMeaninglessParameterAtAll: Any, context: Context) {
+        this.context = context
         wasInitialized = true
     }
 }
