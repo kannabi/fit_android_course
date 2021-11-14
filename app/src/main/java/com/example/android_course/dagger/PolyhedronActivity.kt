@@ -1,7 +1,9 @@
 package com.example.android_course.dagger
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import com.example.android_course.R
 import com.example.android_course.dagger.domain.PolyhedronService
 import javax.inject.Inject
@@ -14,5 +16,8 @@ class PolyhedronActivity : AppCompatActivity() {
         (application as PolyhedronApplication).appComponent.inject(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dagger)
+        findViewById<Button>(R.id.next_button).setOnClickListener {
+            startActivity(Intent(this, PolyhedronActivity::class.java))
+        }
     }
 }

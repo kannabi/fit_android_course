@@ -4,9 +4,11 @@ import com.example.android_course.dagger.domain.DatabasePolyhedronLocalDatasourc
 import com.example.android_course.dagger.domain.PolyhedronLocalDatasource
 import dagger.Binds
 import dagger.Module
+import javax.inject.Singleton
 
 @Module
 interface DatabaseModule {
+    @Singleton
     @Binds
     fun bindLocalDatastore(impl: DatabasePolyhedronLocalDatasource): PolyhedronLocalDatasource
 }

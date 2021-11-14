@@ -1,8 +1,6 @@
 package com.example.android_course.dagger.domain
 
-import javax.inject.Inject
-
-class PolyhedronRemoteDatasource @Inject constructor() {
+class PolyhedronRemoteDatasource {
     var wasInitialized = false
     fun prettyComplexInitialize(notAMeaninglessParameterAtAll: Any) {
         wasInitialized = true
