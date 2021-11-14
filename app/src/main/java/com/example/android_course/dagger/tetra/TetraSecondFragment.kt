@@ -6,13 +6,17 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModelProvider
 import com.example.android_course.R
 import javax.inject.Inject
 
 class TetraSecondFragment : Fragment() {
 
     @Inject
-    lateinit var presenter: TetraPresenter
+    lateinit var viewModelFactory: ViewModelProvider.Factory
+
+    private val viewModel: TetraViewModel by viewModels { viewModelFactory }
 
     override fun onAttach(context: Context) {
         super.onAttach(context)

@@ -12,7 +12,8 @@ import javax.inject.Singleton
     modules = [
         NetworkModule::class,
         DatabaseModule::class,
-        TetraSubcomponentModule::class
+        TetraSubcomponentModule::class,
+        ViewModelBuilderModule::class
     ]
 )
 interface ApplicationComponent {
